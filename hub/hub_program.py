@@ -1,3 +1,4 @@
+import datetime
 import socket
 import fcntl
 import struct
@@ -30,6 +31,7 @@ ACK = bytes("<received>\r\n","utf-8")
 CS = DigitalInOut(board.CE1)
 RESET = DigitalInOut(board.D25)
 FREQ = 915.0
+ID = 0
 
 spi = busio.SPI(board.SCK, MOSI=board.MOSI, MISO=board.MISO)
 rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, FREQ)
@@ -63,10 +65,19 @@ def receive_data():
 		packet_text = str(prev_packet, "utf-8")
 		display.text(packet_text, 0, 2, 1)
 		
+		# Scan the packet text for the sender ID and the data by slicing the packet text
+		sender_id = 
+		data = 
 		
-        	rfm69.send(acknowledgement)
-		time.sleep(1)
+		# Return the timestamp, sender ID, and data
+		current_time = datetime.datetime.now()
+		return (time, sender_id, data)
 
+def add_to_table(row_values):
+	time = row_values[0]
+	sensor = row_values[1]
+	data = row_values[2]
+	
 while True:
 	display_ip()
 	receive_data()
