@@ -12,10 +12,6 @@ import adafruit_ssd1306
 # Import the RFM69 radio module.
 import adafruit_rfm69
 
-def get_ip(ifname):
-  s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-  return socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0x8915, struct.pack('256s', ifname[:15]))[20:24])
-
 # Create the I2C interface.
 i2c = busio.I2C(board.SCL, board.SDA)
  
@@ -34,9 +30,16 @@ spi = busio.SPI(board.SCK, MOSI=board.MOSI, MISO=board.MISO)
 rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, 915.0)
 prev_packet = None
 
+def get_ip():
+  ifname = 'eth0'
+  s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+  return socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0x8915, struct.pack('256s', ifname[:15]))[20:24])
+
+def receive_data()
+
 while True:
   # Display the IP address
-  eth_ip = get_ip('eth0')
+  eth_ip = get_ip()
   display.text('IP: ' + eth_up, 0, 0, 1)
   
   # Attempt to set up the RFM69 Module
