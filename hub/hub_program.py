@@ -27,7 +27,6 @@ width = display.width
 height = display.height
 
 # Configure Packet Radio
-ACK = bytes("<received>\r\n","utf-8")
 CS = DigitalInOut(board.CE1)
 RESET = DigitalInOut(board.D25)
 FREQ = 915.0
@@ -78,6 +77,11 @@ def add_to_table(row_values):
 	time = row_values[0]
 	sensor = row_values[1]
 	data = row_values[2]
+	
+	# Add the data to the table .csv file
+
+def draw_graphs():
+	# Read the .csv file 
 	
 while True:
 	display_ip()
