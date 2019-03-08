@@ -63,6 +63,9 @@ def receive_data():
 
 		display.text('RX: ', 0, 2, 1)
 		print(packet_text)
+		
+		acknowledgement = bytes("<received>\r\n","utf-8")
+        	rfm69.send(acknowledgement)
 		time.sleep(1)
 
 while True:
