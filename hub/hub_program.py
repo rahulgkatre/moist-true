@@ -39,12 +39,25 @@ while True:
   
   # Attempt to set up the RFM69 Module
   try:
-      rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, 915.0)
-      display.text('RFM69: Detected', 0, 0, 1)
+    rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, 915.0)
+    display.text('RFM69: Detected', 0, 0, 1)
   except RuntimeError:
-      # Thrown on version mismatch
-      display.text('RFM69: ERROR', 0, 0, 1)
+    # Thrown on version mismatch
+    display.text('RFM69: ERROR', 0, 0, 1)
+  
+  # check for packet rx
+  packet = rfm69.receive()
+  if packet is None:
+    display.show()
+    display.text('- Waiting for PKT -', 15, 20, 1)
+  else:
+    # Display the packet text and rssi
+    display.fill(0)
+    prev_packet = packet
+    packet_text = str(prev_packet, "utf-8")
+    display.text('RX: ', 0, 0, 1)
+    display.text(packet_text, 25, 0, 1)
+    time.sleep(1)
       
   display.show()
   time.sleep(0.1)
-  
