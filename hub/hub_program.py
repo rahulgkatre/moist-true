@@ -9,6 +9,7 @@ import board
 
 # Import the SSD1306 module.
 import adafruit_ssd1306
+
 # Import the RFM69 radio module.
 import adafruit_rfm69
 
@@ -17,6 +18,7 @@ i2c = busio.I2C(board.SCL, board.SDA)
  
 # 128x32 OLED Display
 display = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c, addr=0x3c)
+
 # Clear the display.
 display.fill(0)
 display.show()
@@ -43,31 +45,24 @@ def receive_data():
 	try:
 		# Attempt to set up the RFM69 Module
 		rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, 915.0)
-		display.text('RFM69: Detected', 0, 0, 1)
+		display.text('RFM69 Detected', 0, 1, 1)
 	except RuntimeError:
 		# Thrown on version mismatch
-		display.text('RFM69: ERROR', 0, 0, 1)
+		display.text('RFM69 Error', 0, 1, 1)
   
 	packet = None
-	
-	# Draw a box to clear the image
-	display.fill(0)
-	# display.text('Radio', 35, 0, 1)
-	
 	packet = rfm69.receive()
 	
 	if packet is None:
 		# Check for packet rx
 		display.show()
-		display.text('- Waiting for PKT -', 15, 20, 1)
 	else:
 		# Display the packet text and rssi
-		display.fill(0)
 		prev_packet = packet
 		packet_text = str(prev_packet, "utf-8")
 
-		display.text('RX: ', 0, 0, 1)
-		display.text(packet_text, 25, 0, 1)
+		display.text('RX: ', 0, 2, 1)
+		print(packet_text)
 		time.sleep(1)
 
 while True:
