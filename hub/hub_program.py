@@ -27,10 +27,12 @@ display.show()
 width = display.width
 height = display.height
 
-# RFM69 Configuration
+# Configure Packet Radio
 CS = DigitalInOut(board.CE1)
 RESET = DigitalInOut(board.D25)
 spi = busio.SPI(board.SCK, MOSI=board.MOSI, MISO=board.MISO)
+rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, 915.0)
+prev_packet = None
 
 while True:
   # Display the IP address
@@ -44,6 +46,8 @@ while True:
   except RuntimeError:
     # Thrown on version mismatch
     display.text('RFM69: ERROR', 0, 0, 1)
+  
+  packet = None
   
   # check for packet rx
   packet = rfm69.receive()
