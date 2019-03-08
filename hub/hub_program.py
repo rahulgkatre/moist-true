@@ -1,11 +1,11 @@
 import socket
 import fcntl
 import struct
-
 import time
 import busio
-from digitalio import DigitalInOut, Direction, Pull
 import board
+
+from digitalio import DigitalInOut, Direction, Pull
 
 # Import the SSD1306 module.
 import adafruit_ssd1306
@@ -26,11 +26,13 @@ width = display.width
 height = display.height
 
 # Configure Packet Radio
+ACK = bytes("<received>\r\n","utf-8")
 CS = DigitalInOut(board.CE1)
 RESET = DigitalInOut(board.D25)
+FREQ = 915.0
+
 spi = busio.SPI(board.SCK, MOSI=board.MOSI, MISO=board.MISO)
-rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, 915.0)
-prev_packet = None
+rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, FREQ)
 
 def get_ip():
 	ifname = 'eth0'
@@ -50,21 +52,18 @@ def receive_data():
 		# Thrown on version mismatch
 		display.text('RFM69 Error', 0, 1, 1)
   
-	packet = None
 	packet = rfm69.receive()
 	
 	if packet is None:
 		# Check for packet rx
 		display.show()
 	else:
-		# Display the packet text and rssi
+		# Display the packet text
 		prev_packet = packet
 		packet_text = str(prev_packet, "utf-8")
-
-		display.text('RX: ', 0, 2, 1)
-		print(packet_text)
+		display.text(packet_text, 0, 2, 1)
 		
-		acknowledgement = bytes("<received>\r\n","utf-8")
+		
         	rfm69.send(acknowledgement)
 		time.sleep(1)
 
