@@ -1,0 +1,199 @@
+<svg width="854.0" height="1631.0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<!-- Generator: Sequence Diagram - v1.5.35-(142) - http://www.macsequencediagram.com -->
+
+<rect x="0.0" y="0.0" width="854.0" height="1631.0" style="fill:#ECECEC;fill-opacity:0.0;"/>
+<g id="Participant box" class="ParticipantBoxView">
+		<rect x="51.0" y="30.0" width="532.0" height="1551.0" style="fill:#000000;fill-opacity:0.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="317.0" y="42.0" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica" font-size="12.0" font-weight="700" style="fill:#000000;fill-opacity:1.0;">Node hub</text>
+	</g>
+<g id="Participant" class="ParticipantView">
+		<rect x="61.0" y="60.0" width="279.0" height="61.0" rx="5.0" ry="5.0" style="fill:#D8D8D8;stroke:#979797;stroke-width:1.0;"/>
+	<text x="200.5" y="90.5" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Device transceiverDisplayBonnet</text>
+	</g>
+<g id="Participant" class="ParticipantView">
+		<rect x="360.0" y="60.0" width="213.0" height="61.0" rx="5.0" ry="5.0" style="fill:#D8D8D8;stroke:#979797;stroke-width:1.0;"/>
+	<text x="466.5" y="90.5" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Controller raspberryPi</text>
+	</g>
+<g id="Participant" class="ParticipantView">
+		<rect x="61.0" y="1510.0" width="279.0" height="61.0" rx="5.0" ry="5.0" style="fill:#D8D8D8;stroke:#979797;stroke-width:1.0;"/>
+	<text x="200.5" y="1540.5" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Device transceiverDisplayBonnet</text>
+	</g>
+<g id="Participant" class="ParticipantView">
+		<rect x="360.0" y="1510.0" width="213.0" height="61.0" rx="5.0" ry="5.0" style="fill:#D8D8D8;stroke:#979797;stroke-width:1.0;"/>
+	<text x="466.5" y="1540.5" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Controller raspberryPi</text>
+	</g>
+<g id="Lifeline" class="LifelineView">
+		<line x1="199.0" y1="121.0" x2="201.0" y2="1510.0" style="fill:none;stroke:#636363;stroke-opacity:1.0;stroke-width:1.0;" stroke-dasharray="20.0, 10.0"/>
+	</g>
+<g id="Lifeline" class="LifelineView">
+		<line x1="465.0" y1="121.0" x2="467.0" y2="1510.0" style="fill:none;stroke:#636363;stroke-opacity:1.0;stroke-width:1.0;" stroke-dasharray="20.0, 10.0"/>
+	</g>
+<g id="Interaction Frame -     loop    " class="InteractionFrameView">
+		<path d="M 85.0,161.0 L 140.0,161.0 L 140.0,169.0 L 134.0,177.0 L 85.0,177.0" style="fill:#FFFFFF;fill-opacity:1.0;stroke:#BEBEB6;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<rect x="85.0" y="161.0" width="496.0" height="1229.0" style="fill:#FFFF00;fill-opacity:0.05;stroke:#000000;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="112.5" y="169.0" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica" font-size="12.0" font-weight="700" style="fill:#000000;fill-opacity:1.0;">    loop    </text>
+	<text x="160.0" y="169.0" text-anchor="start" alignment-baseline="middle" font-family="Helvetica" font-size="12.0" font-weight="700" style="fill:#000000;fill-opacity:1.0;">main()</text>
+	</g>
+<g id="Interaction Frame -     loop    " class="InteractionFrameView">
+		<path d="M 115.0,191.0 L 170.0,191.0 L 170.0,199.0 L 164.0,207.0 L 115.0,207.0" style="fill:#FFFFFF;fill-opacity:1.0;stroke:#BEBEB6;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<rect x="115.0" y="191.0" width="436.0" height="568.0" style="fill:#FFFF00;fill-opacity:0.05;stroke:#000000;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="142.5" y="199.0" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica" font-size="12.0" font-weight="700" style="fill:#000000;fill-opacity:1.0;">    loop    </text>
+	<text x="190.0" y="199.0" text-anchor="start" alignment-baseline="middle" font-family="Helvetica" font-size="12.0" font-weight="700" style="fill:#000000;fill-opacity:1.0;">waitForNetworkConnection()</text>
+	</g>
+<g id="Interaction Frame -     alt    " class="InteractionFrameView">
+		<path d="M 145.0,317.0 L 190.0,317.0 L 190.0,325.0 L 184.0,333.0 L 145.0,333.0" style="fill:#FFFFFF;fill-opacity:1.0;stroke:#BEBEB6;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<rect x="145.0" y="317.0" width="376.0" height="427.0" style="fill:#FFFF00;fill-opacity:0.05;stroke:#000000;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="167.5" y="325.0" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica" font-size="12.0" font-weight="700" style="fill:#000000;fill-opacity:1.0;">    alt    </text>
+	<text x="210.0" y="325.0" text-anchor="start" alignment-baseline="middle" font-family="Helvetica" font-size="12.0" font-weight="700" style="fill:#000000;fill-opacity:1.0;">checkNetworkConnection() is true</text>
+	<text x="210.0" y="551.0" text-anchor="start" alignment-baseline="middle" font-family="Helvetica" font-size="12.0" font-weight="700" style="fill:#000000;fill-opacity:1.0;">checkNetworkConnection() is false</text>
+	</g>
+<g id="else line" class="InteractionFrameElseLineView">
+		<line x1="145.0" y1="537.0" x2="521.0" y2="539.0" style="fill:none;stroke:#000000;stroke-opacity:1.0;stroke-width:1.0;" stroke-dasharray="5.0, 3.0"/>
+	</g>
+<g id="Interaction Frame -     alt    " class="InteractionFrameView">
+		<path d="M 115.0,779.0 L 160.0,779.0 L 160.0,787.0 L 154.0,795.0 L 115.0,795.0" style="fill:#FFFFFF;fill-opacity:1.0;stroke:#BEBEB6;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<rect x="115.0" y="779.0" width="436.0" height="596.0" style="fill:#FFFF00;fill-opacity:0.05;stroke:#000000;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="137.5" y="787.0" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica" font-size="12.0" font-weight="700" style="fill:#000000;fill-opacity:1.0;">    alt    </text>
+	<text x="180.0" y="787.0" text-anchor="start" alignment-baseline="middle" font-family="Helvetica" font-size="12.0" font-weight="700" style="fill:#000000;fill-opacity:1.0;">dataReceived is true</text>
+	</g>
+<g id="Signal" class="SignalMessageView">
+		<text x="454.0" y="239.5" text-anchor="end" alignment-baseline="middle" font-family="Helvetica" font-size="13.0" font-weight="400" style="fill:#000000;fill-opacity:1.0;">boolean checkNetworkConnection()</text>
+	</g>
+<g id="Signal" class="SignalMessageView">
+		<text x="332.5" y="365.5" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica" font-size="13.0" font-weight="400" style="fill:#000000;fill-opacity:1.0;">void displayIPAddress()</text>
+	</g>
+<g id="Signal" class="SignalMessageView">
+		<text x="454.0" y="459.5" text-anchor="end" alignment-baseline="middle" font-family="Helvetica" font-size="13.0" font-weight="400" style="fill:#000000;fill-opacity:1.0;">break</text>
+	</g>
+<g id="Signal" class="SignalMessageView">
+		<text x="332.5" y="577.5" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica" font-size="13.0" font-weight="400" style="fill:#000000;fill-opacity:1.0;">void displayDisconnectedMessage()</text>
+	</g>
+<g id="Signal" class="SignalMessageView">
+		<text x="454.0" y="671.5" text-anchor="end" alignment-baseline="middle" font-family="Helvetica" font-size="13.0" font-weight="400" style="fill:#000000;fill-opacity:1.0;">continue</text>
+	</g>
+<g id="Signal" class="SignalMessageView">
+		<text x="454.0" y="880.5" text-anchor="end" alignment-baseline="middle" font-family="Helvetica" font-size="13.0" font-weight="400" style="fill:#000000;fill-opacity:1.0;">RawData unpackPacket()</text>
+	</g>
+<g id="Signal" class="SignalMessageView">
+		<text x="332.5" y="997.5" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica" font-size="13.0" font-weight="400" style="fill:#000000;fill-opacity:1.0;">void displayReceivedMessage()</text>
+	</g>
+<g id="Signal" class="SignalMessageView">
+		<text x="332.5" y="1091.5" text-anchor="middle" alignment-baseline="middle" font-family="Helvetica" font-size="13.0" font-weight="400" style="fill:#000000;fill-opacity:1.0;">void sendACKMessage()</text>
+	</g>
+<g id="Signal" class="SignalMessageView">
+		<text x="454.0" y="1185.5" text-anchor="end" alignment-baseline="middle" font-family="Helvetica" font-size="13.0" font-weight="400" style="fill:#000000;fill-opacity:1.0;">void addDataToTable()</text>
+	</g>
+<g id="Signal" class="SignalMessageView">
+		<text x="454.0" y="1281.5" text-anchor="end" alignment-baseline="middle" font-family="Helvetica" font-size="13.0" font-weight="400" style="fill:#000000;fill-opacity:1.0;">void graphAndPublishData()</text>
+	</g>
+<g id="Signal line" class="SignalLineView">
+		<path d="M 476.0,249.0 L 465.5,253.5 L 476.0,259.0 L 476.0,249.0" style="fill:#000000;fill-opacity:1.0;"/>
+	<line x1="466.5" y1="231.5" x2="505.5" y2="231.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<line x1="505.5" y1="253.5" x2="476.0" y2="253.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<path d="M 505.5,231.5 Q 515.5,231.5 515.5, 241.5 L 515.5 243.5 Q 515.5,253.5 505.5,253.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	</g>
+<g id="Signal line" class="SignalLineView">
+		<path d="M 210.0,373.0 L 200.0,378.5 L 210.0,383.0 L 210.0, 373.0" style="fill:#000000;fill-opacity:1.0;"/>
+
+	<line x1="210.0" y1="378.5" x2="465.0" y2="378.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+
+	</g>
+<g id="Signal line" class="SignalLineView">
+		<path d="M 476.0,469.0 L 465.5,473.5 L 476.0,479.0 L 476.0,469.0" style="fill:#000000;fill-opacity:1.0;"/>
+	<line x1="466.5" y1="451.5" x2="505.5" y2="451.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<line x1="505.5" y1="473.5" x2="476.0" y2="473.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<path d="M 505.5,451.5 Q 515.5,451.5 515.5, 461.5 L 515.5 463.5 Q 515.5,473.5 505.5,473.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	</g>
+<g id="Signal line" class="SignalLineView">
+		<path d="M 210.0,585.0 L 200.0,590.5 L 210.0,595.0 L 210.0, 585.0" style="fill:#000000;fill-opacity:1.0;"/>
+
+	<line x1="210.0" y1="590.5" x2="465.0" y2="590.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+
+	</g>
+<g id="Signal line" class="SignalLineView">
+		<path d="M 476.0,681.0 L 465.5,685.5 L 476.0,691.0 L 476.0,681.0" style="fill:#000000;fill-opacity:1.0;"/>
+	<line x1="466.5" y1="663.5" x2="505.5" y2="663.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<line x1="505.5" y1="685.5" x2="476.0" y2="685.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<path d="M 505.5,663.5 Q 515.5,663.5 515.5, 673.5 L 515.5 675.5 Q 515.5,685.5 505.5,685.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	</g>
+<g id="Signal line" class="SignalLineView">
+		<path d="M 476.0,890.0 L 465.5,894.5 L 476.0,900.0 L 476.0,890.0" style="fill:#000000;fill-opacity:1.0;"/>
+	<line x1="466.5" y1="872.5" x2="505.5" y2="872.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<line x1="505.5" y1="894.5" x2="476.0" y2="894.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<path d="M 505.5,872.5 Q 515.5,872.5 515.5, 882.5 L 515.5 884.5 Q 515.5,894.5 505.5,894.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	</g>
+<g id="Signal line" class="SignalLineView">
+		<path d="M 210.0,1005.0 L 200.0,1010.5 L 210.0,1015.0 L 210.0, 1005.0" style="fill:#000000;fill-opacity:1.0;"/>
+
+	<line x1="210.0" y1="1010.5" x2="465.0" y2="1010.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+
+	</g>
+<g id="Signal line" class="SignalLineView">
+		<path d="M 210.0,1099.0 L 200.0,1104.5 L 210.0,1109.0 L 210.0, 1099.0" style="fill:#000000;fill-opacity:1.0;"/>
+
+	<line x1="210.0" y1="1104.5" x2="465.0" y2="1104.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+
+	</g>
+<g id="Signal line" class="SignalLineView">
+		<path d="M 476.0,1195.0 L 465.5,1199.5 L 476.0,1205.0 L 476.0,1195.0" style="fill:#000000;fill-opacity:1.0;"/>
+	<line x1="466.5" y1="1177.5" x2="505.5" y2="1177.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<line x1="505.5" y1="1199.5" x2="476.0" y2="1199.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<path d="M 505.5,1177.5 Q 515.5,1177.5 515.5, 1187.5 L 515.5 1189.5 Q 515.5,1199.5 505.5,1199.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	</g>
+<g id="Signal line" class="SignalLineView">
+		<path d="M 476.0,1291.0 L 465.5,1295.5 L 476.0,1301.0 L 476.0,1291.0" style="fill:#000000;fill-opacity:1.0;"/>
+	<line x1="466.5" y1="1273.5" x2="505.5" y2="1273.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<line x1="505.5" y1="1295.5" x2="476.0" y2="1295.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<path d="M 505.5,1273.5 Q 515.5,1273.5 515.5, 1283.5 L 515.5 1285.5 Q 515.5,1295.5 505.5,1295.5" style="fill:none;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	</g>
+<g id="Note" class="NoteView">
+		<rect x="476.0" y="264.0" width="227.0" height="33.0" rx="5.0" ry="5.0" style="fill:#FFCDAA;fill-opacity:1.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="490.0" y="280.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Check the eth0 for an IP adress.</text>
+	</g>
+<g id="Note" class="NoteView">
+		<rect x="210.0" y="388.0" width="319.0" height="33.0" rx="5.0" ry="5.0" style="fill:#FFCDAA;fill-opacity:1.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="224.0" y="404.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">If there is an IP address, display it on the OLED.</text>
+	</g>
+<g id="Note" class="NoteView">
+		<rect x="476.0" y="484.0" width="111.0" height="33.0" rx="5.0" ry="5.0" style="fill:#FFCDAA;fill-opacity:1.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="490.0" y="500.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Exit the loop.</text>
+	</g>
+<g id="Note" class="NoteView">
+		<rect x="210.0" y="600.0" width="348.0" height="33.0" rx="5.0" ry="5.0" style="fill:#FFCDAA;fill-opacity:1.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="224.0" y="616.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Else, display a disconnected message on the OLED.</text>
+	</g>
+<g id="Note" class="NoteView">
+		<rect x="476.0" y="696.0" width="220.0" height="33.0" rx="5.0" ry="5.0" style="fill:#FFCDAA;fill-opacity:1.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="490.0" y="712.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Continue waiting for a network.</text>
+	</g>
+<g id="Note" class="NoteView">
+		<rect x="210.0" y="809.0" width="214.0" height="33.0" rx="5.0" ry="5.0" style="fill:#FFCDAA;fill-opacity:1.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="224.0" y="825.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Wait until a packet is received.</text>
+	</g>
+<g id="Note" class="NoteView">
+		<rect x="476.0" y="905.0" width="340.0" height="54.0" rx="5.0" ry="5.0" style="fill:#FFCDAA;fill-opacity:1.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="490.0" y="923.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Unpack the packet to get a decimal and sender ID.</text>
+	<text x="490.0" y="940.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Store this data and a timestamp in an object.</text>
+	</g>
+<g id="Note" class="NoteView">
+		<rect x="210.0" y="1020.0" width="446.0" height="33.0" rx="5.0" ry="5.0" style="fill:#FFCDAA;fill-opacity:1.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="224.0" y="1036.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Display a message on the OLED stating that data has been received.</text>
+	</g>
+<g id="Note" class="NoteView">
+		<rect x="210.0" y="1114.0" width="444.0" height="33.0" rx="5.0" ry="5.0" style="fill:#FFCDAA;fill-opacity:1.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="224.0" y="1130.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Send a message to the sender acknowledging receipt of the packet.</text>
+	</g>
+<g id="Note" class="NoteView">
+		<rect x="476.0" y="1210.0" width="358.0" height="33.0" rx="5.0" ry="5.0" style="fill:#FFCDAA;fill-opacity:1.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="490.0" y="1226.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Add the decimal, sender ID, and timestamp to a table.</text>
+	</g>
+<g id="Note" class="NoteView">
+		<rect x="476.0" y="1306.0" width="316.0" height="54.0" rx="5.0" ry="5.0" style="fill:#FFCDAA;fill-opacity:1.0;stroke:#979797;stroke-opacity:1.0;stroke-width:1.0;"/>
+	<text x="490.0" y="1324.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Update the plot.ly graph with the new data.</text>
+	<text x="490.0" y="1341.5" text-anchor="start" alignment-baseline="middle" font-family="Helvetica Neue" font-size="14.0" font-weight="300" style="fill:#000000;fill-opacity:1.0;">Update the Apache webserver&apos;s index.html file.</text>
+	</g>
+
+<!-- Generator: Sequence Diagram - v1.5.35-(142) - http://www.macsequencediagram.com -->
+
+</svg>
