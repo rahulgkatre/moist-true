@@ -31,40 +31,48 @@ rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, 915.0)
 prev_packet = None
 
 def get_ip():
-  ifname = 'eth0'
-  s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-  return socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0x8915, struct.pack('256s', ifname[:15]))[20:24])
+	ifname = 'eth0'
+	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+	return socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0x8915, struct.pack('256s', ifname[:15]))[20:24])
 
-def receive_data()
+def display_ip():
+	eth_ip = get_ip()
+	display.text('IP: ' + eth_ip, 0, 0, 1)
+
+def receive_data():
+	try:
+		# Attempt to set up the RFM69 Module
+		rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, 915.0)
+		display.text('RFM69: Detected', 0, 0, 1)
+	except RuntimeError:
+		# Thrown on version mismatch
+		display.text('RFM69: ERROR', 0, 0, 1)
+  
+	packet = None
+	
+	# Draw a box to clear the image
+	display.fill(0)
+	# display.text('Radio', 35, 0, 1)
+	
+	packet = rfm69.receive()
+	
+	if packet is None:
+		# Check for packet rx
+		display.show()
+		display.text('- Waiting for PKT -', 15, 20, 1)
+	else:
+		# Display the packet text and rssi
+		display.fill(0)
+		prev_packet = packet
+		packet_text = str(prev_packet, "utf-8")
+
+		display.text('RX: ', 0, 0, 1)
+		display.text(packet_text, 25, 0, 1)
+		time.sleep(1)
 
 while True:
-  # Display the IP address
-  eth_ip = get_ip()
-  display.text('IP: ' + eth_up, 0, 0, 1)
+	display_ip()
+	receive_data()
   
-  # Attempt to set up the RFM69 Module
-  try:
-    rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, 915.0)
-    display.text('RFM69: Detected', 0, 0, 1)
-  except RuntimeError:
-    # Thrown on version mismatch
-    display.text('RFM69: ERROR', 0, 0, 1)
-  
-  packet = None
-  
-  # check for packet rx
-  packet = rfm69.receive()
-  if packet is None:
-    display.show()
-    display.text('- Waiting for PKT -', 15, 20, 1)
-  else:
-    # Display the packet text and rssi
-    display.fill(0)
-    prev_packet = packet
-    packet_text = str(prev_packet, "utf-8")
-    display.text('RX: ', 0, 0, 1)
-    display.text(packet_text, 25, 0, 1)
-    time.sleep(1)
-      
-  display.show()
-  time.sleep(0.1)
+	display.show()
+	time.sleep(0.1)
