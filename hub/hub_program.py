@@ -44,6 +44,7 @@ def get_ip():
 def display_ip():
 	eth_ip = get_ip()
 	display.text('IP: ' + eth_ip, 0, 0, 1)
+	display.show()
 
 def receive_data():
 	try:
@@ -82,6 +83,5 @@ while True:
 	display_ip()
 	data_row = receive_data()
 	add_to_table(data_row)
-  
-	display.show()
+  	
 	time.sleep(0.1)
