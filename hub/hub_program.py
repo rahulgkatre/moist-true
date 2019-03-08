@@ -81,6 +81,7 @@ def add_to_table(row_values):
 while True:
 	display_ip()
 	receive_data()
+	add_to_table()
   
 	display.show()
 	time.sleep(0.1)
